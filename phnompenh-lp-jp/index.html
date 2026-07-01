@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- ソフトローンチ中：公式LINE/GoogleフォームURL等が埋まり本番化する際にこの1行を削除する -->
+<meta name="robots" content="noindex, nofollow">
+<title>Pich Estates｜カンボジア不動産を現地から日本語でご案内</title>
+<meta name="description" content="カンボジア（プノンペン）のコンドミニアム投資を、日本語で、リスクの説明から。無理な勧誘をせず、物件ごとの収支や外国人の所有制度を確認しながら検討するためのオンライン個別相談です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#13263f;
+  --navy-deep:#0c1a2e;
+  --navy-soft:#1d3a5f;
+  --ink:#222a35;
+  --sub:#5a6573;
+  --bg:#ffffff;
+  --bg-soft:#f4f6f9;
+  --bg-warm:#faf8f4;
+  --line:#dde3ea;
+  --gold:#b08d4f;
+  --gold-light:#e8d4ae;
+  --gold-pale:#f3ead9;
+  --green:#06C755;
+  --green-dark:#05a648;
+  --warn-bg:#fbf6ee;
+  --warn-line:#d9c193;
+  --serif:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic",Meiryo,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.9;
+  font-size:16px;
+  word-break:normal;
+  overflow-wrap:anywhere;
+}
+img,svg{max-width:100%;height:auto;display:block;}
+.wrap{
+  max-width:680px;
+  margin:0 auto;
+  padding:0 20px;
+}
+section{padding:64px 0;position:relative;}
+h2{
+  font-family:var(--serif);
+  font-size:25px;
+  line-height:1.55;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+.sec-head{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin-bottom:10px;
+}
+.sec-num{
+  font-family:var(--serif);
+  font-size:40px;
+  font-weight:600;
+  line-height:1;
+  color:var(--gold);
+  opacity:.85;
+  padding-top:4px;
+  letter-spacing:.02em;
+}
+.sec-head-text{flex:1;}
+.sec-eyebrow{
+  display:block;
+  font-size:11.5px;
+  font-weight:700;
+  letter-spacing:.18em;
+  color:var(--gold);
+  margin-bottom:6px;
+}
+.sec-lead{
+  color:var(--sub);
+  font-size:15px;
+  margin-bottom:28px;
+}
+p{margin-bottom:1.2em;}
+p:last-child{margin-bottom:0;}
+
+/* ---------- reveal animation ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.in{
+  opacity:1;
+  transform:none;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(1.2) blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:56px;
+}
+.brand{
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:15px;
+  color:var(--navy);
+  text-decoration:none;
+  letter-spacing:.04em;
+}
+.header-cta{
+  font-size:13px;
+  font-weight:700;
+  color:#fff;
+  background:var(--green);
+  text-decoration:none;
+  padding:9px 16px;
+  border-radius:999px;
+  white-space:nowrap;
+}
+.header-cta:active{background:var(--green-dark);}
+
+/* ---------- CTA button ---------- */
+.btn-line{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  width:100%;
+  max-width:420px;
+  margin:0 auto;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  text-align:center;
+  font-size:17px;
+  font-weight:700;
+  padding:17px 24px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(6,199,85,.32);
+  transition:transform .12s ease, background .12s ease;
+}
+.btn-line:active{
+  background:var(--green-dark);
+  transform:translateY(1px);
+}
+.btn-line .icon-line{flex:none;}
+.btn-line .label{line-height:1.4;}
+.btn-line .label .small{
+  display:block;
+  font-size:11.5px;
+  font-weight:500;
+  opacity:.92;
+}
+.cta-note{
+  text-align:center;
+  font-size:12.5px;
+  color:var(--sub);
+  margin-top:12px;
+  line-height:1.7;
+}
+.cta-alt{
+  display:block;
+  width:max-content;
+  max-width:100%;
+  margin:14px auto 0;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+  text-underline-offset:4px;
+}
+.hero .cta-alt,
+.final-cta .cta-alt{color:#dbe5f2;}
+.cta-block{margin-top:36px;}
+
+/* ---------- icons ---------- */
+.ic{
+  width:24px;
+  height:24px;
+  stroke:currentColor;
+  stroke-width:1.8;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.icon-circle{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:var(--bg-soft);
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:none;
+  border:1px solid var(--line);
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 78% 15%,rgba(176,141,79,.18),transparent 30%),
+    linear-gradient(135deg,#09182a 0%,#102945 58%,#173859 100%);
+  color:#fff;
+  padding:64px 0 54px;
+  overflow:hidden;
+  min-height:calc(100vh - 56px);
+  display:flex;
+  align-items:center;
+}
+.hero .wrap{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+.hero-layout{
+  display:grid;
+  gap:42px;
+  align-items:center;
+}
+.hero-copy{max-width:650px;}
+.hero-whisper{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.18em;
+  color:var(--gold-light);
+  margin-bottom:18px;
+}
+.hero-whisper::before{
+  content:"";
+  width:34px;
+  height:1px;
+  background:var(--gold);
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:32px;
+  line-height:1.42;
+  font-weight:700;
+  letter-spacing:.015em;
+  margin-bottom:20px;
+}
+.hero h1 .accent{
+  color:var(--gold-light);
+}
+.hero-sub{
+  font-size:15px;
+  color:#d4dde8;
+  line-height:1.9;
+  max-width:600px;
+  margin-bottom:0;
+}
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:24px 0 0;
+}
+.hero-badges span{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:12.5px;
+  font-weight:700;
+  color:#e9e0cb;
+  border:1px solid rgba(232,212,174,.45);
+  background:rgba(232,212,174,.08);
+  border-radius:999px;
+  padding:6px 14px;
+}
+.hero-badges .dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--gold-light);
+  flex:none;
+}
+.hero-points{
+  display:grid;
+  grid-template-columns:1fr;
+  list-style:none;
+  margin:24px 0 0;
+  border-top:1px solid rgba(255,255,255,.13);
+  border-bottom:1px solid rgba(255,255,255,.13);
+}
+.hero-points li{
+  position:relative;
+  padding:13px 4px 13px 27px;
+  font-size:13.5px;
+  color:#e3eaf2;
+  line-height:1.55;
+}
+.hero-points li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:9px;
+  width:14px;
+  height:8px;
+  border-left:2.5px solid var(--gold);
+  border-bottom:2.5px solid var(--gold);
+  transform:rotate(-45deg);
+}
+.hero-actions{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:26px;
+}
+.hero-actions .btn-line{
+  width:auto;
+  min-width:300px;
+  margin:0;
+}
+.hero-actions .cta-alt{
+  margin:0 0 0 8px;
+}
+.hero .cta-note{color:#b9c7d8;}
+.hero-disclaimer{
+  font-size:11.5px;
+  color:#8fa2b8;
+  margin-top:18px;
+  line-height:1.7;
+}
+.hero-visual{
+  position:relative;
+  min-height:440px;
+  border:1px solid rgba(232,212,174,.28);
+  border-radius:2px 64px 2px 2px;
+  box-shadow:0 28px 70px rgba(0,0,0,.22);
+  overflow:hidden;
+}
+.hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(8,22,39,.05) 25%,rgba(8,22,39,.8) 100%);
+  pointer-events:none;
+}
+.hero-city-image{
+  width:100%;
+  height:100%;
+  min-height:440px;
+  object-fit:cover;
+  object-position:center;
+}
+.visual-caption{
+  position:absolute;
+  z-index:2;
+  left:24px;
+  bottom:22px;
+  color:#dce5ef;
+  font-size:11px;
+  line-height:1.7;
+  letter-spacing:.04em;
+}
+.hero-skyline{
+  margin-top:36px;
+  line-height:0;
+}
+.hero-skyline svg{width:100%;height:auto;}
+
+/* ---------- empathy ---------- */
+.empathy{background:var(--bg);}
+.worry-list{
+  list-style:none;
+  margin:24px 0;
+}
+.worry-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:16px;
+  margin-bottom:12px;
+  font-size:15px;
+  line-height:1.75;
+  color:var(--ink);
+}
+.worry-q{
+  flex:none;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#fff;
+  border:1.5px solid var(--navy);
+  color:var(--navy);
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:2px;
+}
+.empathy-close{
+  background:var(--warn-bg);
+  border:1px solid var(--warn-line);
+  border-radius:12px;
+  padding:24px 20px;
+  margin-top:28px;
+  font-size:15px;
+  position:relative;
+}
+.empathy-close::before{
+  content:"";
+  position:absolute;
+  top:0;left:20px;right:20px;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),transparent);
+  border-radius:0 0 3px 3px;
+}
+.empathy-close strong{
+  color:var(--navy);
+  font-family:var(--serif);
+  font-size:16.5px;
+}
+
+/* ---------- why now ---------- */
+.whynow{background:var(--bg-soft);}
+.card-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+  margin:28px 0;
+}
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:24px 20px;
+  box-shadow:0 2px 10px rgba(12,26,46,.04);
+}
+.card-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:12px;
+}
+.card h3{
+  font-family:var(--serif);
+  font-size:17px;
+  color:var(--navy);
+  line-height:1.5;
+  flex:1;
+}
+.card p{
+  font-size:14.5px;
+  color:var(--sub);
+  line-height:1.8;
+}
+.mini-chart{
+  margin:14px 0 6px;
+  background:var(--bg-soft);
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:12px 12px 6px;
+}
+.mini-chart svg{width:100%;height:auto;}
+.chart-cap{
+  font-size:10.5px;
+  color:var(--sub);
+  text-align:center;
+  padding-bottom:4px;
+}
+.fine{
+  font-size:12px;
+  color:var(--sub);
+  line-height:1.7;
+  background:#fff;
+  border:1px dashed var(--line);
+  border-radius:8px;
+  padding:12px 14px;
+}
+
+/* ---------- strengths ---------- */
+.strength{background:var(--bg);}
+.strength::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;right:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent);
+}
+.strength-item{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  border-bottom:1px solid var(--line);
+  padding:28px 0;
+}
+.strength-item:last-of-type{border-bottom:none;}
+.strength-num{
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:600;
+  color:var(--gold);
+  line-height:1;
+  width:48px;
+  flex:none;
+  padding-top:4px;
+  text-align:center;
+}
+.strength-body{flex:1;}
+.strength-item h3{
+  font-family:var(--serif);
+  font-size:18px;
+  color:var(--navy);
+  margin-bottom:8px;
+  line-height:1.5;
+}
+.strength-item p{
+  font-size:15px;
+  color:var(--ink);
+}
+
+/* ---------- risk ---------- */
+.risk{
+  background:
+    radial-gradient(ellipse 80% 50% at 100% 0%, rgba(176,141,79,.14), transparent 60%),
+    var(--navy);
+  color:#e8edf4;
+  overflow:hidden;
+}
+.risk h2{color:#fff;}
+.risk .sec-lead{color:#aebccd;}
+.risk-item{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:24px 20px;
+  margin-bottom:16px;
+}
+.risk-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+.risk-head .icon-circle{
+  width:44px;
+  height:44px;
+  background:rgba(232,212,174,.1);
+  border-color:rgba(232,212,174,.35);
+  color:var(--gold-light);
+}
+.risk-item h3{
+  font-family:var(--serif);
+  font-size:16.5px;
+  color:#f0e2c4;
+  line-height:1.6;
+  flex:1;
+}
+.risk-item p{
+  font-size:14.5px;
+  line-height:1.85;
+  color:#d6dfe9;
+}
+.ownership-fig{
+  margin:18px auto 6px;
+  max-width:380px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  padding:18px 12px 10px;
+}
+.ownership-fig svg{width:100%;height:auto;}
+.fig-cap{
+  font-size:11px;
+  color:#97a8bd;
+  text-align:center;
+  margin-top:6px;
+}
+.risk-close{
+  margin-top:28px;
+  font-size:15px;
+  line-height:1.9;
+}
+.risk-close strong{color:#fff;}
+
+/* ---------- consult ---------- */
+.consult{background:var(--bg-warm);}
+.consult-cols{margin:24px 0;}
+.consult-box{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:24px 20px;
+  margin-bottom:16px;
+  box-shadow:0 2px 10px rgba(12,26,46,.04);
+}
+.consult-box h3{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:16px;
+  margin-bottom:14px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--bg-soft);
+  line-height:1.5;
+}
+.consult-box.do h3{color:var(--navy);border-color:var(--gold);}
+.consult-box.dont h3{color:var(--sub);}
+.consult-box h3 .ic{width:20px;height:20px;flex:none;}
+.consult-box ul{list-style:none;}
+.consult-box li{
+  position:relative;
+  padding-left:24px;
+  font-size:14.5px;
+  margin-bottom:9px;
+  line-height:1.75;
+}
+.consult-box.do li::before{
+  content:"";
+  position:absolute;
+  left:1px;
+  top:8px;
+  width:12px;
+  height:7px;
+  border-left:2.5px solid var(--gold);
+  border-bottom:2.5px solid var(--gold);
+  transform:rotate(-45deg);
+}
+.consult-box.dont li::before{
+  content:"×";
+  position:absolute;
+  left:2px;
+  top:0;
+  color:#b6bec8;
+  font-weight:700;
+}
+
+/* phone mockup */
+.consult-flow{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+  align-items:center;
+  margin-top:36px;
+}
+.phone{
+  width:250px;
+  margin:0 auto;
+  background:#0d1623;
+  border-radius:34px;
+  padding:10px;
+  box-shadow:0 14px 38px rgba(12,26,46,.25);
+}
+.phone-screen{
+  background:#8a9bb5;
+  border-radius:26px;
+  overflow:hidden;
+}
+.phone-head{
+  background:var(--green);
+  color:#fff;
+  font-size:12px;
+  font-weight:700;
+  text-align:center;
+  padding:14px 10px 10px;
+  letter-spacing:.02em;
+}
+.chat{
+  padding:14px 12px 18px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  background:#93a5be;
+}
+.bubble{
+  max-width:82%;
+  font-size:11.5px;
+  line-height:1.65;
+  padding:9px 12px;
+  border-radius:14px;
+}
+.bubble.user{
+  align-self:flex-end;
+  background:#8de055;
+  color:#16330a;
+  border-radius:14px 14px 4px 14px;
+}
+.bubble.staff{
+  align-self:flex-start;
+  background:#fff;
+  color:var(--ink);
+  border-radius:14px 14px 14px 4px;
+}
+.steps{
+  counter-reset:step;
+  list-style:none;
+}
+.steps li{
+  counter-increment:step;
+  position:relative;
+  padding:0 0 24px 54px;
+  font-size:15px;
+  line-height:1.75;
+}
+.steps li::before{
+  content:counter(step);
+  position:absolute;
+  left:0;
+  top:0;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 3px 8px rgba(12,26,46,.2);
+}
+.steps li:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  left:17.5px;
+  top:40px;
+  bottom:2px;
+  width:1.5px;
+  background:var(--warn-line);
+}
+.steps li strong{
+  display:block;
+  color:var(--navy);
+  font-family:var(--serif);
+  font-size:15.5px;
+}
+.steps li span{
+  font-size:13.5px;
+  color:var(--sub);
+}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--bg);}
+.faq details{
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin-bottom:12px;
+  background:#fff;
+  overflow:hidden;
+  transition:box-shadow .2s ease;
+}
+.faq details[open]{
+  box-shadow:0 4px 14px rgba(12,26,46,.07);
+  border-color:#c8d2dd;
+}
+.faq summary{
+  list-style:none;
+  cursor:pointer;
+  padding:17px 44px 17px 16px;
+  font-size:15px;
+  font-weight:700;
+  color:var(--navy);
+  line-height:1.6;
+  position:relative;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  -webkit-tap-highlight-color:transparent;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq .q-badge{
+  flex:none;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--navy);
+  color:#fff;
+  font-family:var(--serif);
+  font-size:14px;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:1px;
+}
+.faq summary::after{
+  content:"";
+  position:absolute;
+  right:18px;
+  top:28px;
+  width:9px;
+  height:9px;
+  border-right:2px solid var(--gold);
+  border-bottom:2px solid var(--gold);
+  transform:translateY(-70%) rotate(45deg);
+  transition:transform .2s ease;
+}
+.faq details[open] summary::after{
+  transform:translateY(-30%) rotate(-135deg);
+}
+.faq .a{
+  padding:2px 18px 18px 56px;
+  font-size:14.5px;
+  color:var(--ink);
+  line-height:1.85;
+}
+.faq .a p{margin-bottom:.8em;}
+
+/* ---------- final CTA ---------- */
+.final-cta{
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(176,141,79,.2), transparent 65%),
+    linear-gradient(170deg,var(--navy) 0%,var(--navy-deep) 100%);
+  color:#fff;
+  text-align:center;
+  padding:72px 0 0;
+  overflow:hidden;
+}
+.final-cta h2{
+  color:#fff;
+  font-size:24px;
+  margin-bottom:14px;
+}
+.final-cta p{
+  font-size:15px;
+  color:#cfd9e5;
+  margin-bottom:4px;
+}
+.final-cta .cta-block{margin-top:28px;}
+.final-cta .cta-note{color:#a9b8ca;}
+.final-cta .hero-skyline{margin-top:48px;opacity:.85;}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--navy-deep);
+  color:#9fb0c4;
+  font-size:12px;
+  padding:36px 0 120px;
+  line-height:1.9;
+}
+footer .foot-brand{
+  font-family:var(--serif);
+  color:#dbe4ee;
+  font-weight:700;
+  font-size:14px;
+  margin-bottom:10px;
+}
+footer .foot-links{margin:14px 0;}
+footer .foot-links a{
+  color:#bccadb;
+  text-decoration:underline;
+  margin-right:16px;
+}
+.disclaimer{
+  border-top:1px solid rgba(255,255,255,.14);
+  margin-top:18px;
+  padding-top:18px;
+  font-size:11.5px;
+  color:#8094ab;
+}
+.copyright{margin-top:16px;font-size:11px;}
+
+/* ---------- sticky mobile CTA ---------- */
+.sticky-cta{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:100;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.97);
+  border-top:1px solid var(--line);
+  box-shadow:0 -4px 16px rgba(12,26,46,.10);
+  transform:translateY(110%);
+  transition:transform .25s ease;
+}
+.sticky-cta.show{transform:translateY(0);}
+.sticky-cta a{
+  display:block;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  text-align:center;
+  font-size:15px;
+  font-weight:700;
+  padding:14px 16px;
+  border-radius:10px;
+}
+.sticky-cta a:active{background:var(--green-dark);}
+
+/* ---------- desktop ---------- */
+@media (min-width:720px){
+  body{font-size:16.5px;}
+  .wrap{max-width:780px;}
+  section{padding:88px 0;}
+  h2{font-size:29px;}
+  .sec-num{font-size:48px;}
+  .hero{padding:72px 0;}
+  .hero .wrap{max-width:1120px;}
+  .hero-layout{grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:70px;}
+  .hero h1{font-size:46px;}
+  .hero-sub{font-size:16px;}
+  .hero-points{grid-template-columns:1fr 1fr;}
+  .hero-points li:nth-child(2){border-left:1px solid rgba(255,255,255,.13);}
+  .hero-points li:last-child{grid-column:1 / -1;border-top:1px solid rgba(255,255,255,.13);}
+  .hero-actions{flex-direction:row;align-items:center;}
+  .hero-actions .cta-alt{margin:0;}
+  .card-grid{grid-template-columns:1fr 1fr;}
+  .consult-cols{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+  }
+  .consult-box{margin-bottom:0;}
+  .consult-flow{
+    grid-template-columns:260px 1fr;
+    gap:48px;
+  }
+  footer{padding-bottom:48px;}
+  .sticky-cta{display:none;}
+}
+@media (max-width:719px){
+  .hero-visual{min-height:300px;}
+  .hero-city-image{min-height:300px;}
+  .hero-actions .btn-line{width:100%;min-width:0;}
+  .hero-actions{align-items:stretch;}
+  .hero-actions .cta-alt{text-align:center;margin:0 auto;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Pich Estates</a>
+    <a class="header-cta" href="{{公式LINE登録URL}}">LINEで問い合わせる</a>
+  </div>
+</header>
+
+<!-- ===== 1. ファーストビュー ===== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="hero-whisper">PHNOM PENH REAL ESTATE</p>
+        <h1>現地の目で選ぶ。<br><span class="accent">プノンペンの不動産。</span></h1>
+        <p class="hero-sub">Pich Estatesは、プノンペンの物件情報や購入の流れを、日本語でご案内します。価格だけでは見えない賃貸需要や管理費、所有条件も、物件ごとに整理して検討できます。</p>
+        <div class="hero-badges">
+          <span><i class="dot"></i>プノンペンの物件情報</span>
+          <span><i class="dot"></i>日本語で相談</span>
+          <span><i class="dot"></i>オンライン対応</span>
+        </div>
+        <ul class="hero-points">
+          <li>空室・管理費まで含めて収支を確認</li>
+          <li>外国人の所有条件を物件ごとに確認</li>
+          <li>購入前の情報収集から相談可能</li>
+        </ul>
+        <div class="hero-actions" id="hero-cta">
+          <a class="btn-line" href="{{公式LINE登録URL}}">
+            <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+            <span class="label">LINEで問い合わせる<span class="small">情報収集の段階でも大丈夫です</span></span>
+          </a>
+          <a class="cta-alt" href="{{GoogleフォームURL}}">メールで問い合わせる</a>
+        </div>
+        <p class="hero-disclaimer">※物件価格・賃料・税制・法制度は変動します。具体的な検討時には個別に確認します。</p>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-city-image" src="phnom-penh-city-hero.png" alt="夕暮れのプノンペン市街をイメージした景観">
+        <p class="visual-caption">PHNOM PENH, CAMBODIA<br><small>※街並みのイメージ画像</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. 共感・問題提起 ===== -->
+<section class="empathy">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">YOUR CONCERNS</span>
+        <h2>海外不動産を検討するとき、<br>こんな情報が必要になります。</h2>
+      </div>
+    </div>
+    <ul class="worry-list">
+      <li><span class="worry-q">？</span><span>日本語の情報が少なく、あっても古い。何が今の実態なのか分からない</span></li>
+      <li><span class="worry-q">？</span><span>現地の業者と、言葉の壁を越えて契約まで進める自信がない</span></li>
+      <li><span class="worry-q">？</span><span>広告上の利回りではなく、購入後に手元へ残る収支を知りたい</span></li>
+      <li><span class="worry-q">？</span><span>エリアや開発会社による違いを、現地の視点から確認したい</span></li>
+      <li><span class="worry-q">？</span><span>そもそも外国人が本当に所有できるのか、法律的な裏付けが分からない</span></li>
+    </ul>
+    <div class="empathy-close">
+      <p><strong>必要なのは、物件ごとに比較できる具体的な情報です。</strong></p>
+      <p>Pich Estatesでは、物件価格だけでなく、周辺の賃料相場、管理費、所有条件、購入後の管理など、検討に必要な情報を日本語で整理してお伝えします。</p>
+    </div>
+    <div class="cta-block">
+      <a class="btn-line" href="{{公式LINE登録URL}}">
+        <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+        <span class="label">LINEで問い合わせる<span class="small">情報収集の段階でも大丈夫です</span></span>
+      </a>
+      <a class="cta-alt" href="{{GoogleフォームURL}}">LINEを使わない方はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. カンボジア不動産を検討する視点 ===== -->
+<section class="whynow">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">WHAT TO CONSIDER</span>
+        <h2>カンボジア不動産を<br>検討する4つの視点。</h2>
+      </div>
+    </div>
+    <p class="sec-lead">国全体のイメージではなく、物件ごとの条件を比較して判断します。</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-top">
+          <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="6.5" r="2.6"/><circle cx="17.5" cy="17.5" r="2.6"/><line x1="18.5" y1="5.5" x2="5.5" y2="18.5"/></svg></span>
+          <h3>手取り収支で見極める</h3>
+        </div>
+        <p>広告上の表面利回りだけでは判断しません。想定賃料、空室期間、管理費、修繕、税費用、送金コストなどを確認し、手元に残る金額を保守的に試算します。</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="3,7 10,14 13.5,10.5 21,18"/><polyline points="15.5,18 21,18 21,12.5"/></svg></span>
+          <h3>エリアと賃貸需要</h3>
+        </div>
+        <p>同じプノンペンでも、エリアや物件によって主な借り手、賃料相場、空室状況は異なります。周辺の比較物件や生活環境を確認します。</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8.5" cy="8.5" r="3.4"/><path d="M2.8 20c0-3.2 2.5-5.2 5.7-5.2s5.7 2 5.7 5.2"/><circle cx="17" cy="9.5" r="2.7"/><path d="M16.2 14.6c2.9.1 5 2 5 4.9"/></svg></span>
+          <h3>開発会社と管理状況</h3>
+        </div>
+        <p>完成済みか建設中か、開発会社の実績、建物の管理状況、引き渡し後の管理体制などを確認します。</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M16.8 7c-.9-1.4-2.6-2-4.6-2-2.6 0-4.7 1.4-4.7 3.6 0 4.6 9.3 2.5 9.3 7.1 0 2.2-2.1 3.6-4.6 3.6-2.1 0-3.9-.8-4.9-2.3"/></svg></span>
+          <h3>購入から売却までの流れ</h3>
+        </div>
+        <p>購入時の契約・登記だけでなく、賃貸管理、賃料の受け取り、将来売却する場合の方法まで整理して検討します。</p>
+      </div>
+    </div>
+    <p class="fine">※市場全体の傾向だけで投資判断はできません。実際の検討では、物件資料、登記・契約条件、管理状況、賃貸事例、税務・法務の確認が必要です。</p>
+    <div class="cta-block">
+      <a class="btn-line" href="{{公式LINE登録URL}}">
+        <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+        <span class="label">LINEで問い合わせる<span class="small">希望条件や疑問を相談できます</span></span>
+      </a>
+      <a class="cta-alt" href="{{GoogleフォームURL}}">LINEを使わない方はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. 我々の強み ===== -->
+<section class="strength">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">OUR STANCE</span>
+        <h2>私たちがお約束する、<br>4つの姿勢。</h2>
+      </div>
+    </div>
+    <p class="sec-lead">在庫物件の多さを誇るのではなく、相談相手としての姿勢でお選びいただきたいと考えています。</p>
+    <div class="strength-item">
+      <span class="strength-num">壱</span>
+      <div class="strength-body">
+        <h3>物件の条件を具体的に確認します</h3>
+        <p>価格や間取りだけでなく、想定賃料、管理費、周辺環境、所有条件など、判断に必要な項目を物件ごとに確認します。</p>
+      </div>
+    </div>
+    <div class="strength-item">
+      <span class="strength-num">弐</span>
+      <div class="strength-body">
+        <h3>日本語で理解できる状態をつくります</h3>
+        <p>情報収集やご相談は日本語で進めます。契約時には、現地の原文・専門家の確認を省略せず、理解できないまま署名する状況を避けます。</p>
+      </div>
+    </div>
+    <div class="strength-item">
+      <span class="strength-num">参</span>
+      <div class="strength-body">
+        <h3>値上がり期待ではなく、利回りで考えます</h3>
+        <p>「将来何倍になる」という値上がり前提の提案はしません。賃料収入という実態のある数字をベースに、保守的なシナリオでご一緒に試算します。</p>
+      </div>
+    </div>
+    <div class="strength-item">
+      <span class="strength-num">肆</span>
+      <div class="strength-body">
+        <h3>目的に合う物件を一緒に絞り込みます</h3>
+        <p>予算、保有目的、希望する運用方法を伺い、条件に合う選択肢を整理します。条件に合わない場合も、その理由を具体的にお伝えします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. 購入前の確認事項 ===== -->
+<section class="risk">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">BEFORE YOU BUY</span>
+        <h2>購入前に確認する、<br>3つのポイント。</h2>
+      </div>
+    </div>
+    <p class="sec-lead">海外不動産だからこそ、物件の魅力だけでなく、購入後まで見通して判断することが大切です。</p>
+    <div class="risk-item">
+      <div class="risk-head">
+        <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="8" width="14" height="13"/><path d="M5 8l7-4.5L19 8"/><line x1="9" y1="12" x2="9" y2="17"/><line x1="15" y1="12" x2="15" y2="17"/></svg></span>
+        <h3>外国人の所有条件</h3>
+      </div>
+      <p>外国人による土地所有には制限があります。コンドミニアムについても、対象階、外国人保有枠、登記状況、契約条件を物件ごとに確認します。</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-head">
+        <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18"/><path d="M16.8 7c-.9-1.4-2.6-2-4.6-2-2.6 0-4.7 1.4-4.7 3.6 0 4.6 9.3 2.5 9.3 7.1 0 2.2-2.1 3.6-4.6 3.6-2.1 0-3.9-.8-4.9-2.3"/></svg></span>
+        <h3>為替・空室・管理費を含む収支</h3>
+      </div>
+      <p>広告上の利回りだけではなく、想定賃料、空室期間、管理費、税費用、修繕、為替変動などを含め、手元に残る金額を確認します。</p>
+    </div>
+    <div class="risk-item">
+      <div class="risk-head">
+        <span class="icon-circle"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><polyline points="3,7 10,14 13.5,10.5 21,18"/><polyline points="15.5,18 21,18 21,12.5"/></svg></span>
+        <h3>現地管理と売却方法</h3>
+      </div>
+      <p>購入後に誰が入居者対応や物件管理を行うのか、将来売却したい場合にどのような方法があるのかを、購入前に整理します。</p>
+    </div>
+    <p class="risk-close">具体的な条件や注意点は、検討する物件に合わせて個別相談でご説明します。</p>
+    <div class="cta-block">
+      <a class="btn-line" href="{{公式LINE登録URL}}">
+        <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+        <span class="label">物件選びの確認事項を相談する<span class="small">Pich Estates公式LINE</span></span>
+      </a>
+      <a class="cta-alt" href="{{GoogleフォームURL}}">LINEを使わない方はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. 無料個別相談で得られること ===== -->
+<section class="consult">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">FREE CONSULTATION</span>
+        <h2>無料個別相談で<br>得られること。</h2>
+      </div>
+    </div>
+    <p class="sec-lead">オンライン面談（30〜60分・無料）で、疑問や希望条件を整理します。</p>
+    <div class="consult-cols">
+      <div class="consult-box do">
+        <h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8 3v6c0 4.8-3.4 8.3-8 10.5-4.6-2.2-8-5.7-8-10.5v-6z"/><polyline points="8.5,11.5 11,14 15.5,9"/></svg>この面談でやること</h3>
+        <ul>
+          <li>カンボジア不動産の現状を、良い面も悪い面も中立的に整理</li>
+          <li>所有制度・税金・購入の流れなど、疑問への回答</li>
+          <li>ご自身の資産状況・目的に照らして「向いているか」の判断材料の提供</li>
+          <li>予算や目的に合う検討条件の整理</li>
+        </ul>
+      </div>
+      <div class="consult-box dont">
+        <h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/><line x1="15.5" y1="8.5" x2="8.5" y2="15.5"/></svg>相談前に決めなくてよいこと</h3>
+        <ul>
+          <li>購入する物件</li>
+          <li>購入時期</li>
+          <li>現地視察の日程</li>
+          <li>具体的な購入予算</li>
+        </ul>
+      </div>
+    </div>
+    <div class="consult-flow">
+      <!-- LINEトーク画面イメージ -->
+      <div class="phone" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="phone-head">Pich Estates 公式LINE</div>
+          <div class="chat">
+            <div class="bubble user">まだ漠然と興味がある段階なのですが、相談しても大丈夫ですか？</div>
+            <div class="bubble staff">もちろんです。気になるエリアやご希望を伺いながら、情報を整理しますね。</div>
+            <div class="bubble user">来週の平日夜でお願いします。</div>
+          </div>
+        </div>
+      </div>
+      <ol class="steps">
+        <li><strong>公式LINEに登録</strong><span>所要1分。登録だけでもOKです。</span></li>
+        <li><strong>気になることを一言＆日程調整</strong><span>「まだ漠然と興味がある段階」でも大丈夫です。</span></li>
+        <li><strong>オンライン面談(30〜60分・無料)</strong><span>カメラオフでも構いません。その後の連絡頻度もご希望に合わせます。</span></li>
+      </ol>
+    </div>
+    <div class="cta-block">
+      <a class="btn-line" href="{{公式LINE登録URL}}">
+        <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+        <span class="label">LINEで問い合わせる<span class="small">Pich Estates公式LINE</span></span>
+      </a>
+      <a class="cta-alt" href="{{GoogleフォームURL}}">LINEを使わない方はこちら</a>
+      <p class="cta-note">情報収集の段階でもご相談いただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. FAQ ===== -->
+<section class="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <div class="sec-head-text">
+        <span class="sec-eyebrow">FAQ</span>
+        <h2>よくあるご質問</h2>
+      </div>
+    </div>
+    <p class="sec-lead">面談前に多くいただくご質問をまとめました。</p>
+
+    <details>
+      <summary><span class="q-badge">Q</span>外国人の私でも、本当に所有できるのですか？</summary>
+      <div class="a">
+        <p>外国人による土地所有には制限があります。一方、法令上の条件を満たす共同所有建物の専有部分は、外国人名義で所有できる場合があります。対象階、外国人保有枠、登記状況などを物件ごとに確認し、必要に応じて現地専門家の確認を前提にご案内します。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>いくらくらいから検討できますか？</summary>
+      <div class="a">
+        <p>物件・エリア・時期・為替によって大きく変わるため、断定的な金額はお伝えできません。一般論としては、東京都心の区分マンションよりも小さい予算から検討対象になるケースが多い市場です。ご予算をお聞きした上で、現実的なラインを面談で率直にお伝えします。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>英語もクメール語もできませんが、大丈夫ですか？</summary>
+      <div class="a">
+        <p>ご相談と情報整理は日本語で進められます。契約時には原文や現地専門家の確認が必要になるため、日本語だけで済ませるのではなく、内容を日本語で理解できる状態をつくりながら進めます。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>現地へ行かずに検討できますか？</summary>
+      <div class="a">
+        <p>情報収集やオンライン相談は、日本からでも進められます。契約や現地確認の方法は物件によって異なるため、具体的な物件が決まった段階で必要な手続きをご案内します。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>購入後の物件管理はどうなりますか？</summary>
+      <div class="a">
+        <p>入居者募集、賃料回収、問い合わせ対応、建物管理など、必要な業務を物件ごとに確認します。管理体制や費用は購入前にご説明します。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>将来売却したい場合はどうなりますか？</summary>
+      <div class="a">
+        <p>売却方法や買い手の探し方は、物件や市況によって異なります。購入時点から出口も確認し、想定される流れや費用を整理します。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="q-badge">Q</span>税金や購入時の諸費用はかかりますか？</summary>
+      <div class="a">
+        <p>物件代金以外にも、契約・登記、税金、管理などに費用が発生する場合があります。対象物件に応じて必要項目を整理し、専門的な判断が必要な部分は税務・法務の専門家への確認をご案内します。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== 8. 最後のCTA ===== -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>迷っている段階こそ、<br>相談する価値があります。</h2>
+    <p>買うと決めてから相談に来る必要はありません。</p>
+    <p>まだ物件や購入時期が決まっていなくても、ご相談いただけます。</p>
+    <div class="cta-block">
+      <a class="btn-line" href="{{公式LINE登録URL}}">
+        <svg class="icon-line" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path fill="#fff" d="M13 3C7.2 3 2.5 6.9 2.5 11.7c0 4.3 3.8 7.9 8.9 8.6.35.07.82.23.94.52.1.27.07.69.03.96l-.15.9c-.05.27-.21 1.04.92.57 1.13-.47 6.1-3.6 8.32-6.15C23 15.4 23.5 13.6 23.5 11.7 23.5 6.9 18.8 3 13 3zM8.4 14.2H6.3a.55.55 0 0 1-.55-.55V9.5a.55.55 0 0 1 1.1 0v3.6h1.55a.55.55 0 0 1 0 1.1zm2.1-.55a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 1.1 0v4.15zm5 0a.55.55 0 0 1-.99.33l-2.06-2.8v2.47a.55.55 0 0 1-1.1 0V9.5a.55.55 0 0 1 .99-.33l2.06 2.8V9.5a.55.55 0 0 1 1.1 0v4.15zm3.4-2.63a.55.55 0 0 1 0 1.1h-1.55v1h1.55a.55.55 0 0 1 0 1.1h-2.1a.55.55 0 0 1-.55-.55V9.5c0-.3.25-.55.55-.55h2.1a.55.55 0 0 1 0 1.1h-1.55v1h1.55z"/></svg>
+        <span class="label">LINEで問い合わせる<span class="small">情報収集の段階でも大丈夫です</span></span>
+      </a>
+      <a class="cta-alt" href="{{GoogleフォームURL}}">LINEを使わない方はこちら（メールで問い合わせ）</a>
+      <p class="cta-note">オンラインでご相談いただけます。</p>
+    </div>
+  </div>
+  <div class="hero-skyline" aria-hidden="true">
+    <svg viewBox="0 0 750 130" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#0e2138">
+        <rect x="0" y="58" width="40" height="72"/>
+        <rect x="50" y="38" width="34" height="92"/>
+        <rect x="95" y="66" width="28" height="64"/>
+        <rect x="132" y="28" width="46" height="102"/>
+        <rect x="186" y="52" width="30" height="78"/>
+        <rect x="226" y="18" width="40" height="112"/>
+        <rect x="276" y="62" width="26" height="68"/>
+        <rect x="312" y="42" width="38" height="88"/>
+        <rect x="358" y="22" width="44" height="108"/>
+        <rect x="410" y="56" width="30" height="74"/>
+        <rect x="448" y="34" width="36" height="96"/>
+        <rect x="492" y="12" width="48" height="118"/>
+        <rect x="548" y="52" width="32" height="78"/>
+        <rect x="588" y="32" width="40" height="98"/>
+        <rect x="636" y="58" width="30" height="72"/>
+        <rect x="672" y="40" width="36" height="90"/>
+        <rect x="714" y="62" width="36" height="68"/>
+      </g>
+      <g fill="#08121f">
+        <rect x="18" y="72" width="52" height="58"/>
+        <rect x="108" y="50" width="56" height="80"/>
+        <rect x="198" y="76" width="46" height="54"/>
+        <rect x="258" y="40" width="56" height="90"/>
+        <rect x="330" y="70" width="50" height="60"/>
+        <rect x="418" y="52" width="62" height="78"/>
+        <rect x="498" y="72" width="48" height="58"/>
+        <rect x="558" y="46" width="58" height="84"/>
+        <rect x="638" y="70" width="56" height="60"/>
+        <rect x="706" y="54" width="44" height="76"/>
+      </g>
+      <g fill="#e8d4ae" opacity=".35">
+        <rect x="120" y="60" width="4" height="4"/>
+        <rect x="270" y="52" width="4" height="4"/>
+        <rect x="292" y="66" width="4" height="4"/>
+        <rect x="430" y="64" width="4" height="4"/>
+        <rect x="570" y="58" width="4" height="4"/>
+        <rect x="592" y="74" width="4" height="4"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <div class="wrap">
+    <p class="foot-brand">Pich Estates</p>
+    <p>運営者：Kenta Shigyu</p>
+    <p>所在地：249B, Street 107, Sangkat Boeung Prolit, Khan 7 Makara, Phnom Penh, Cambodia</p>
+    <div class="foot-links">
+      <a href="{{プライバシーポリシー・特定商取引法表記へのリンク}}">プライバシーポリシー</a>
+      <a href="{{プライバシーポリシー・特定商取引法表記へのリンク}}">特定商取引法に基づく表記</a>
+    </div>
+    <div class="disclaimer">
+      <p>【重要事項】本ページに記載の利回り・価格動向・人口動態等の数値は、過去の実績および執筆時点の情報に基づく想定であり、将来の運用成果・価格・収益を保証するものではありません。不動産投資には、価格変動リスク、為替変動リスク、空室リスク、流動性リスク、竣工リスク、法制度・政情変化等のカントリーリスクその他のリスクが存在し、投資元本を割り込む可能性があります。本ページは情報提供を目的としたものであり、特定の物件の取得を勧誘するものではありません。投資に関する最終的な決定は、ご自身の判断と責任において行ってください。</p>
+    </div>
+    <p class="copyright">&copy; Pich Estates</p>
+  </div>
+</footer>
+
+<!-- ===== モバイル固定CTAバー ===== -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a href="{{公式LINE登録URL}}">LINEで問い合わせる</a>
+</div>
+
+<script>
+(function(){
+  /* 固定CTAバー：ヒーローのCTAが画面外に出たら表示 */
+  var bar = document.getElementById('stickyCta');
+  var heroCta = document.getElementById('hero-cta');
+  if(bar && heroCta && 'IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      var e = entries[0];
+      /* ヒーローCTAを通過（画面上方に消えた）後のみ表示 */
+      var passed = !e.isIntersecting && e.boundingClientRect.top < 0;
+      bar.classList.toggle('show', passed);
+      bar.setAttribute('aria-hidden', passed ? 'false' : 'true');
+    }, {threshold: 0});
+    io.observe(heroCta);
+  }else if(bar){
+    bar.classList.add('show');
+    bar.setAttribute('aria-hidden','false');
+  }
+
+  /* スクロール時のフェードイン */
+  var targets = document.querySelectorAll('.worry-list li, .empathy-close, .card, .strength-item, .risk-item, .consult-box, .phone, .steps li, .faq details, .sec-head');
+  if('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var rio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          e.target.classList.add('in');
+          rio.unobserve(e.target);
+        }
+      });
+    }, {threshold: .12, rootMargin: '0px 0px -30px 0px'});
+    targets.forEach(function(t){
+      t.classList.add('reveal');
+      rio.observe(t);
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
