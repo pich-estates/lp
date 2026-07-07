@@ -949,6 +949,14 @@ footer .foot-links a{
   .hero-actions .cta-alt{text-align:center;margin:0 auto;}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18303060870"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18303060870');
+</script>
 </head>
 <body>
 
@@ -1406,5 +1414,27 @@ footer .foot-links a{
 })();
 </script>
 
+<!-- Messengerボタンのクリックをコンバージョン計測（AW-18303060870 / Messenger_Click） -->
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest ? e.target.closest('a[href*="m.me/"]') : null;
+  if (!a) return;
+  e.preventDefault();
+  var url = a.href;
+  var done = false;
+  var go = function () {
+    if (done) return;
+    done = true;
+    window.location = url;
+  };
+  try {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18303060870/CtQcCO_osMwcEIaXypdE',
+      'event_callback': go
+    });
+  } catch (err) { go(); }
+  setTimeout(go, 700); /* 計測が遅い場合も0.7秒で必ず遷移させる保険 */
+});
+</script>
 </body>
 </html>
